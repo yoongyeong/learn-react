@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Person from './Person/Person'
+import person from './Person/Person';
 
 class App extends Component {
 	state = {
@@ -25,8 +26,8 @@ class App extends Component {
 		this.setState( {
 			person: [
 				// { name: newName, age: newAge },
-				{ id: '3qw2rdfz3wq' name: 'Kvine', age: 42 },
-				{ id: 'edsgtr54tre' name: event.target.value, age: 40 },
+				{ id: '3qw2rdfz3wq', name: 'Kvine', age: 42 },
+				{ id: 'edsgtr54tre', name: event.target.value, age: 40 },
 			]
 		} )
 	}
@@ -56,7 +57,7 @@ class App extends Component {
 								click={() => this.deletePersonHandler( index )}
 								name={prsn.name}
 								age={prsn.age}
-								key={index}
+								key={prsn.id}
 							/>
 						} )
 					}
